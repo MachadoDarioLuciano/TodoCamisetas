@@ -1,0 +1,136 @@
+.contenedor {
+    background: $fondo;
+    color: aliceblue;
+    padding: 0 40px;
+}
+
+.container-contacto {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+
+    .titulo-contacto {
+        text-align: center;
+        font-size: 35px;
+        color: black;
+    }
+
+    .container-form {
+        box-shadow: 0 0 20px rgba(255, 255, 255, .3);
+
+        .contact-form {
+            background: $gris;
+            padding: 20px;
+
+            form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .fijar {
+                    grid-column: 1 / 3;
+
+                }
+
+                p {
+                    margin: 0;
+                    padding: 20px;
+                }
+
+                button,
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border: none;
+                    background: none;
+                    outline: 0;
+                    border-bottom: 1px solid $verde;
+                    color: black;
+                }
+
+                button {
+                    background: $verde;
+                    border: 0;
+                    text-transform: uppercase;
+                    padding: 10px;
+
+                    &:hover,
+                    &:focus {
+                        background: #77a018;
+                        color: aliceblue;
+                        outline: 0;
+                        transition: .1s;
+                    }
+                }
+            }
+        }
+
+        .contact-info {
+            background: black;
+            padding: 20px;
+
+            h4,
+            ul,
+            p {
+                text-align: center;
+                margin: 0 0 10px 0;
+            }
+
+            ul {
+                li {
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 769px) {
+    .contenedor {
+        padding: 0 20px;
+
+        .container-form {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+
+            .contact-form,
+            .contact-info {
+                padding: 22px;
+            }
+
+            .contact-info {
+
+                h4,
+                ul,
+                p {
+                    padding: 10px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+@media(max-width: 559px) {
+    .contenedor {
+        padding: 15px;
+        .container-contacto {
+            margin: 0;
+            padding: 0;
+            padding-top: 15px;
+            .contact-form {
+                form {
+                    display: block;
+                }
+            }
+            .titulo-contacto {
+                font-size: 25px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}

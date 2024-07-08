@@ -1,0 +1,142 @@
+.main-ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    background: $gris;
+    border-top: 20px solid $fondo;
+    border-bottom: 20px solid $fondo;
+
+    .section-ofertas {
+        text-align: center;
+        margin: 30px;
+        width: 309px;
+        height: 394px;
+        background-color: white;
+        border-radius: 8px;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: .2s;
+        }
+
+        p {
+            color: black;
+        }
+
+        img {
+            height: 300px;
+        }
+
+        .button-ofert {
+            display: none;
+        }
+    }
+}
+
+.banner-ofertas1 {
+    position: relative;
+    display: inline-block;
+
+    img {
+        display: block;
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 0 10px black;
+        margin-top: 10px;
+    }
+
+    h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: red;
+        font-size: 120px;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+    }
+}
+
+@media(max-width: 1441px) {
+    .main-ofertas {
+
+        .section-ofertas {
+            width: 250px;
+            height: 315px;
+            margin: 12px;
+
+            img {
+                height: 219px;
+            }
+        }
+    }
+    .banner-ofertas1{
+        h2{
+            font-size: 70px;
+        }
+    }
+
+}
+
+@media(max-width: 767px) {
+    .main-ofertas {
+
+        .section-ofertas {
+            width: 176px;
+            height: 230px;
+
+            img {
+                height: 151px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+
+            .button-ofert {
+                display: inline-block;
+            }
+
+            .button-agr {
+                display: none;
+            }
+        }
+    }
+    .banner-ofertas1{
+        h2{
+            font-size: 50px;
+        }
+    }
+}
+
+@media(max-width: 580px) {
+
+    .main-ofertas {
+        width: 100%;
+
+        .section-ofertas {
+            width: 144px;
+            height: 182px;
+            margin: 5px;
+
+            img {
+                height: 110px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .banner-ofertas1 {
+        img {
+            border-radius: 2px;
+        }
+        h2{
+            font-size: 32px;
+        }
+    }
+}

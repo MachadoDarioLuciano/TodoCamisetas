@@ -1,0 +1,100 @@
+.main-nosotros {
+    font-size: 19px;
+    padding: 5px;
+    margin: 0 250px 0 250px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .titulo-nosotros {
+        text-align: left;
+        font-size: 40px;
+        color: black;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin: 19px;
+        color: black;
+    }
+
+    .subtitulo-nosotros {
+        margin-top: 100px;
+        margin-bottom: 80px;
+        border-left: 3px $verde;
+        border-style: outset;
+        padding: 10px;
+
+        h5 {
+            text-align: left;
+            font-size: 30px;
+            color: black;
+        }
+
+        p {
+            color: black;
+        }
+    }
+}
+
+.titulo-ubicacion {
+    text-align: left;
+    font-size: 30px;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+.maps-ubicacion {
+    text-align: center;
+    margin: 18px 18px 0px 18px;
+    padding-bottom: 18px;
+
+    iframe {
+        border-radius: 10px;
+    }
+}
+
+
+@media(max-width: 1300px) {
+    .main-nosotros {
+        margin: 0 150px 0 150px;
+    }
+}
+
+@media(max-width: 1000px) {
+
+    .main-nosotros {
+        margin: 0 80px 0 80px;
+
+        .titulo-nosotros,
+        .subtitulo-nosotros {
+            h5 {
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+@media(max-width: 767px) {
+    .main-nosotros {
+        margin: 0 10px 0 10px;
+
+        p {
+            font-size: 15px;
+        }
+    }
+    .subtitulo-nosotros h5,
+    .titulo-ubicacion {
+        font-size: 20px;
+    }
+ 
+    .maps-ubicacion iframe {
+        width: 300px;
+        height: 200px;
+    }
+
+}

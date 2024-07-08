@@ -1,0 +1,133 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px;
+    background-color: $gris;
+    align-items: center;
+    padding: 10px;
+
+    .logo {
+        display: flex;
+        text-decoration: none;
+        color: aliceblue;
+        align-items: center;
+
+        img {
+            height: 50px;
+            margin: 12px;
+        }
+
+        h1 {
+            margin: 12px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    }
+
+
+    .navbarra {
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+            padding: 5px;
+            margin: 10px 16px;
+            border-radius: 3px;
+
+            &:hover {
+                color: $gris;
+                background-color: aliceblue;
+                transition: .3s;
+                transform: scale(1.2);
+            }
+        }
+
+    }
+
+    .icon-hamb {
+        display: none;
+    }
+
+    @media(max-width: 1069px) {
+        .logo {
+            h1 {
+                font-size: 19px;
+            }
+
+            img {
+                height: 30px;
+            }
+        }
+
+        .navbarra {
+            a {
+                padding: 3px;
+                margin: 6px 10px;
+                font-size: 12px;
+            }
+        }
+
+        .subtitulo-index p {
+            font-size: 20px;
+        }
+    }
+
+    @media(max-width: 767px) {
+
+        flex-direction: column;
+
+        .navbarra {
+            padding: 8px 0px;
+        }
+
+    }
+
+    @media(max-width: 528px) {
+        flex-direction: row;
+
+        .navbarra {
+            a {
+                display: none;
+            }
+        }
+
+        .icon-hamb {
+            display: inline-block;
+
+            nav {
+                height: 0px;
+                background: $gris;
+
+            }
+
+            .marg-top {
+                padding: 0 !important;
+
+                .modifi-hamb {
+                    background: $gris;
+                    height: 70px;
+
+                    .logo-hamb {
+                        color: aliceblue;
+
+                        .resp-log {
+                            width: 60px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .navbarra {
+            display: none;
+        }
+
+
+    }
+}
